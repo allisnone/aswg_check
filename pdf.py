@@ -2,6 +2,7 @@
 #https://wkhtmltopdf.org/downloads.html
 #https://pypi.org/project/pdfkit/
 #https://www.cnblogs.com/my8100/p/7738366.html
+#sudo apt-get install libxrender1 fontconfig xvfb
 import pdfkit
 import os
 
@@ -24,14 +25,19 @@ def html2pdf(dest_url='',result_dir='./result/',wkhtmltopdf_dir='',now_time_str=
     if not dest_url:
         dest_url = 'file:///' + current_path + '/result/result.html'
     options = { 
-        'page-size':'letter',
+        #'page-size':'letter',
+        'page-size':'A3',
         'margin-top':'0.75in', 
         'margin-right':'0.75in',
         'margin-bottom':'0.75in',
         'margin-left':'0.75in',
         'encoding':"UTF-8",
-        'no-outline':None
+        'custom-header': [('Accept-Encoding', 'gzip')],
+        'no-outline':None,
+        #'quiet': ''
         }
     result_pdf_name = result_dir +  'aswg' + now_time_str + '.pdf'
-    pk = pdfkit.from_url(dest_url,result_pdf_name,options=options,configuration=config)
+    #pk = pdfkit.from_url(dest_url,result_pdf_name,options=options,configuration=config)
+    css = ['./static/css/bootstrap.min.css', './static/css/bootstrap-theme.min.css']
+    pdfkit.from_file('./result/result.html',result_pdf_name,options=options,css=css,configuration=config)
     return
