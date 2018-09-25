@@ -115,7 +115,7 @@ def get_item_html(request_result,url_mapping=URL_MAPPING,image_status=IMAGE_STAT
 
 def form_head_element():
     head_html =  '<div class="row" style="width:100%;"> \
-        <div class="col-sm-1"> <p> 结果 </p></div>  \
+        <div class="col-sm-1"> <p> 状态 </p></div>  \
         <div class="col-sm-3"> <p> 测试分类 </p></div> \
         <div class="col-sm-1"> <p> 阻断 </p></div> \
         <div class="col-sm-6" style="text-align:center;"> <p> 测试描述 </p></div> \
