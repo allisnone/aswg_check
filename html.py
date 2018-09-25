@@ -89,7 +89,6 @@ def get_item_html(request_result,url_mapping=URL_MAPPING,image_status=IMAGE_STAT
     http_status = request_result[3]
     aswg_status = request_result[4]
     #aswg_status_html = '<img src="' + aswg_status + '" style="width:15px; height:15px; margin:5px;">'
-    
     status_img = IMAGE_STATUS['pass']
     text_class = 'text-primary'
     if http_status==200:
@@ -98,8 +97,6 @@ def get_item_html(request_result,url_mapping=URL_MAPPING,image_status=IMAGE_STAT
     test_name = URL_MAPPING[config_id]['name']
     test_detail = URL_MAPPING[config_id]['detail']
     #test_description = URL_MAPPING[config_id]['description']
-    
-    
     row_html = '''<div class="row {text_class}" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
         <div> <img src="{status_img} "style="width:15px; height:15px; margin:5px;"> </div>
