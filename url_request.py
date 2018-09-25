@@ -5,12 +5,11 @@ import csv
 import json
 import string
 import requests
-import codecs
 from urllib.parse import quote
 from config import VIRUS_BLOCK_INFO,URL_BLOCK_INFO,DLP_BLOCK_INFO,PROXIES,SECURITY_CONFIG,REPLACE_KEYS,reverse_str
 import random,sys
 from requests_toolbelt.multipart.encoder import MultipartEncoder
-import html
+import html_create as html
 #pip install requests_toolbelt
 #from aswg.config import SECURITY_CONFIG
 import datetime

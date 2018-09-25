@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from distutils.core import setup
 import py2exe
 import sys
@@ -21,3 +22,5 @@ setup(
     windows=[{"script": "aswg.py", "icon_resources": [(1, "./static/images/aswg.ico")] }],   
      
     ) 
+
+#pyinstaller -F -w static/images/aswg.ico aswg.py
