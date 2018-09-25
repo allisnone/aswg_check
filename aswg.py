@@ -9,7 +9,7 @@ if __name__ == '__main__':
     print("3. 如开始ASWG代理测试，请确认你的公网IP地址已经加入ASWG的内网并加入免认证规则; 并在运行时添加ASWG代理IP:端口")
     print("4. 如果你没有ASWG代理，可暂时使用默认代理：华为云ASWG代理，加参数1即可: python aswg.py 1")
     #print('默认代理=',req.PROXIES)
-    print('----------------------设置ASWG代理服务器--------------')  
+    print('----------------------检查ASWG代理服务器设置--------------')  
     proxies = {}
     aswg_or_not = ''
     if len(sys.argv)>=2:
