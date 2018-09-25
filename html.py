@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 from config import URL_MAPPING,IMAGE_STATUS
 
-def get_summary_title_html(h3_content='综合评估',now_time='2018-09-24'):
+def get_summary_title_html(h3_content='综合评估',proxy='None',now_time='2018-09-24'):
     summary_title = '''
         <div style="width:100%;font-size: 18px; color: #2A2C30; font-weight:500;">
             <h3 style="text-align:left;">{0}</h3>  
-            <h5 style="text-align:right;">{1}</h5>
-        </div>'''.format( h3_content,now_time)
+            <h4 style="text-align:right;"> 代理服务器：{1}</h4>
+            <h5 style="text-align:right;">{2}</h5>
+        </div>'''.format( h3_content,proxy,now_time)
     return summary_title
 
 def get_L1_summary_html(h4_content='安全评估',loader_img='../static/images/loader.png',fail_img=IMAGE_STATUS['fail'],fail_count=0,

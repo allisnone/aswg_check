@@ -20,7 +20,7 @@ if __name__ == '__main__':
                 print('测试将不经过任何ASWG！！！')
             elif str(proxy) == '1':
                 proxies = req.PROXIES
-                print('使用默认代理： ', req.PROXIES)
+                print('当前使用默认代理： ', req.PROXIES['http'])
             elif ':' not in proxy:
                 print("你当前输入的代理是:%s ,请输入正确的ASWG IP +端口号" % proxy)
                 sys.exit()

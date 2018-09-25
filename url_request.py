@@ -310,7 +310,12 @@ def get_aswg_result(conf=SECURITY_CONFIG,proxy=PROXIES):
     now_time_str = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
     now_time = datetime.datetime.now().strftime('%A %Y-%m-%d %H:%M:%S %p')
     base_html = read_base_html()
-    summary_html = html.get_summary_title_html(h3_content='综合评估',now_time=now_time)
+    proxy_str = 'None'
+    if proxy:
+        proxy_str = proxy['http']
+    else:
+        pass
+    summary_html = html.get_summary_title_html(h3_content='综合评估',proxy=proxy_str,now_time=now_time)
     base_html = base_html.replace(REPLACE_KEYS['Summary Title'],summary_html)
     all_summary_list = []
     all_summary = {}
