@@ -15,12 +15,12 @@ def html2pdf(dest_url='',result_dir='./result/',wkhtmltopdf_dir='',now_time_str=
     :param now_time_str: str,PDF文件的日期和有无代理标识。
     :return: none，无返回值
     """
-    path_wk = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
+    #path_wk = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
     if not wkhtmltopdf_dir:
         pass
     else:
         path_wk = wkhtmltopdf_dir + '/wkhtmltopdf.exe'
-    config = pdfkit.configuration(wkhtmltopdf=path_wk)
+    #config = pdfkit.configuration(wkhtmltopdf=path_wk)
     current_path = os.path.split(os.path.realpath(__file__))[0].replace('\\','/')
     if not dest_url:
         dest_url = 'file:///' + current_path + '/result/result.html'
@@ -38,7 +38,7 @@ def html2pdf(dest_url='',result_dir='./result/',wkhtmltopdf_dir='',now_time_str=
         }
     result_pdf_name = result_dir +  'aswg' + now_time_str + '.pdf'
     #生成PDF文件
-    pdfkit.from_url(dest_url,result_pdf_name,options=options,configuration=config)
+    pdfkit.from_url(dest_url,result_pdf_name,options=options)#,configuration=config)
     #css = ['./static/css/bootstrap.min.css', './static/css/bootstrap-theme.min.css']
     #pdfkit.from_file('./result/result.html',result_pdf_name,options=options,css=css,configuration=config)
     return
