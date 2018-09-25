@@ -37,7 +37,8 @@ def html2pdf(dest_url='',result_dir='./result/',wkhtmltopdf_dir='',now_time_str=
         #'quiet': ''
         }
     result_pdf_name = result_dir +  'aswg' + now_time_str + '.pdf'
-    #pk = pdfkit.from_url(dest_url,result_pdf_name,options=options,configuration=config)
-    css = ['./static/css/bootstrap.min.css', './static/css/bootstrap-theme.min.css']
-    pdfkit.from_file('./result/result.html',result_pdf_name,options=options,css=css,configuration=config)
+    #生成PDF文件
+    pdfkit.from_url(dest_url,result_pdf_name,options=options,configuration=config)
+    #css = ['./static/css/bootstrap.min.css', './static/css/bootstrap-theme.min.css']
+    #pdfkit.from_file('./result/result.html',result_pdf_name,options=options,css=css,configuration=config)
     return
