@@ -1,6 +1,6 @@
 # aswg_check
 
-使用步骤：
+环境准备和使用步骤：
 1. 安装python3 环境： 
 		Windows, Mac 去下载相应的安装包： https://www.python.org/downloads/
 		Linux 系统默认安装2python2.7， 可以使用 直接安装新版本，然后设置python3的环境变量。 或者安装python 多版本控制工具 pyenv
@@ -9,6 +9,7 @@
 2. 安装python 依赖库：
 pip install requests
 pip install requests_toolbelt
+pip install pdfkit
 
 3. 安装HTML转换未PDF工具 wkhtmltopdf，并设置用户环境变量：
 	wkhtmltopdf下载地址： https://wkhtmltopdf.org/downloads.html
