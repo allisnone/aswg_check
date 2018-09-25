@@ -4,9 +4,13 @@ from config import URL_MAPPING,IMAGE_STATUS
 def get_summary_title_html(h3_content='综合评估',proxy='None',now_time='2018-09-24'):
     summary_title = '''
         <div style="width:100%;font-size: 18px; color: #2A2C30; font-weight:500;">
-            <h3 style="text-align:left;">{0}</h3>  
-            <h4 style="text-align:right;"> 代理服务器：{1}</h4>
-            <h5 style="text-align:right;">{2}</h5>
+            <div class="test-result-div col-xs-6 col-sm-6">
+                <h3 style="text-align:left;">{0}</h3>  
+            </div>
+            <div class="test-result-div col-xs-6 col-sm-6">
+                <h4 style="text-align:right;"> 代理服务器：<p class="text-success">{1}</p> </h4>
+                <h5 style="text-align:right;">{2}</h5>
+            </div>
         </div>'''.format( h3_content,proxy,now_time)
     return summary_title
 
@@ -20,7 +24,7 @@ def get_L1_summary_html(h4_content='安全评估',loader_img='../static/images/l
         if pass_rate<50:
             result_class = 'text-danger' #text-wairning
         elif pass_rate<80:
-            result_class = 'text-danger' #text-wairning
+            result_class = 'text-wairning' #text-wairning
         else:
             result_class = 'text-success' #text-wairning
     #<img src="{failimg}" style="height:16px; width:16px; margin: 26px 6px 8px 0px;">      
