@@ -14,7 +14,9 @@ import html
 #pip install requests_toolbelt
 #from aswg.config import SECURITY_CONFIG
 import datetime
-import pdf
+#import pdf
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def encodeURL(url):
     """
@@ -341,14 +343,13 @@ def get_aswg_result(conf=SECURITY_CONFIG,proxy=PROXIES):
             l2_pass_count = L2_sumary['total'] - L2_sumary['200_ok']
             sub_summary_html = html.get_sub_summary_html(h3_content=l2_h3_content,h4_content=l2_h4_content,
                          fail_count=L2_sumary['200_ok'],pass_count=l2_pass_count,section=l2_section)
-            print(sub_result)
+            print(L2,' L2 detail: ',sub_result)
+            print(L2,' L2 summary: ',L2_sumary)
             l2_result_key = L2 + ' Result'
             #替换子项的总结
-            print('REPLACE_KEYS[L2]=',REPLACE_KEYS[L2])
             base_html = base_html.replace(REPLACE_KEYS[L2],sub_summary_html)
             #替换子项的具体行
             base_html = base_html.replace(REPLACE_KEYS[l2_result_key], sub_section_html)
-            print(L2,': ', L2_sumary)
             L1_summary_list.append(L2_sumary)
         #汇总L1的summary
         L1_summary = combile_L2_summary(L1_summary_list)
@@ -358,10 +359,9 @@ def get_aswg_result(conf=SECURITY_CONFIG,proxy=PROXIES):
         if L1== 'Data Protection Assessment':
             l1_h4_content = '数据评估'
         l1_fail_count = L1_summary['200_ok']
-        l1_pass_count = L1_summary['total'] - L2_sumary['200_ok']
+        l1_pass_count = L1_summary['total'] - L1_summary['200_ok']
         L1_summary_html = html.get_L1_summary_html(l1_h4_content,loader_img='../static/images/loader.png',
                                                    fail_count=l1_fail_count,pass_count=l1_pass_count)
-        print('REPLACE_KEYS[L1]=',REPLACE_KEYS[L1])
         base_html = base_html.replace(REPLACE_KEYS[L1],L1_summary_html)
         L1_summary_html = ''
         all_summary_list.append(L1_summary)
