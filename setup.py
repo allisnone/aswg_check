@@ -24,3 +24,4 @@ setup(
     ) 
 
 #pyinstaller -F -w static/images/aswg.ico aswg.py
+#https://blog.csdn.net/u014563989/article/details/80940321
