@@ -37,8 +37,12 @@
     
     
   <div class="container" style="display:flex; padding: 35px 0px 15px 0px;">
-  <div style="width:33%; text-align:left; font-size: 18px;         color: #2A2C30; font-weight:500;"><h3>综合评估</h3></div>         <div style="width:34%; text-align:center;font-size: 15px; color:#2A2C30;         vertical-align: middle;"><span> Tuesday 2018-09-25 10:06:02 AM </span></div>
-  <div id="showTestFilter" style="width:33%; text-align:right;  margin-top:-8px; display:none;" >
+  
+        <div style="width:100%;font-size: 18px; color: #2A2C30; font-weight:500;">
+            <h3 style="text-align:left;">综合评估</h3>  
+            <h5 style="text-align:right;">Tuesday 2018-09-25 14:21:40 PM</h5>
+        </div>
+  <div id="showTestFilter" style="width:100%; text-align:right;  margin-top:-8px; display:none;" >
   <button id="showAllTest" type="button" class="btn btn-link" style="font-size: 13px; color: #2A2C30; text-decoration: none" disabled>Show All Tests</button> |
   <button id="showFailTest" type="button" class="btn btn-link" style="font-size: 13px; color: #009CDA; text-decoration: none" disabled>Show Failed Tests</button>
   </div>
@@ -55,22 +59,23 @@
                 </span>
                 <div class="horizontal-align" style="margin: 10px 12px;">
                     <div style="display:flex;">
-                        <span class="text-danger" style="display:block;font-size:20px">0.0%</span>
+                        
                         <div style="margin: 0 0 0 8%; width: 35%;">
                             <img src="../static/images/fail.png" style="height:16px; width:16px; margin: 26px 6px 8px 0px;">
-                            <p id="FailCountData" style="color:#D82D24; font-size:20px; display:inline; top:13px; position:relative;">7</p>
-                            <span style="display:block; color: #4C4F54; word-wrap: break-word;">Failed</span>
+                            <p id="FailCountData" style="color:#D82D24; font-size:20px; display:inline; top:13px; position:relative;">2</p>
+                            <span style="display:block; color: #4C4F54; word-wrap: break-word;">失败</span>
                         </div>
-                        <div style="margin: 0 8% 0 0%; width:25%;">
+                        <div style="margin: 0 8% 0 0%; width:35%;">
                             <img src="../static/images/pass.png" style="height:16px; width:16px; margin: 26px 6px 8px 0px;">
-                            <p id="PassCountData" style="color:#399C1D; font-size:20px; display:inline; top:13px; position:relative;">0</p>
-                            <span style="display:block; color: #4C4F54;">Passed</span>
+                            <p id="PassCountData" style="color:#399C1D; font-size:20px; display:inline; top:13px; position:relative;">5</p>
+                            <span style="display:block; color: #4C4F54;">成功</span>
+                        </div>
+                        <div style="margin: 0 8% 0 0%; width:35%;">
+                            <p id="PassCountData" style="color:#399C1D; height:16px; width:16px; margin: 26px 6px 8px 0px; font-size:20px;text-align:left;"><span class="text-danger" style="display:block;font-size:20px">71%</span></p>
+                            <span style="display:block; color: #4C4F54;">成功率</span>
                         </div>
                     </div>
                 </div>
-                <span style="display:None;">
-                    <p style="font-size: 11px; color:#77797C;" class="text-center">Apply to Data Protection test</p>
-                </span>
             </div>
         </div>
         </div>
@@ -84,22 +89,23 @@
                 </span>
                 <div class="horizontal-align" style="margin: 10px 12px;">
                     <div style="display:flex;">
-                        <span class="text-danger" style="display:block;font-size:20px">0.0%</span>
+                        
                         <div style="margin: 0 0 0 8%; width: 35%;">
                             <img src="../static/images/fail.png" style="height:16px; width:16px; margin: 26px 6px 8px 0px;">
-                            <p id="FailCountData" style="color:#D82D24; font-size:20px; display:inline; top:13px; position:relative;">14</p>
-                            <span style="display:block; color: #4C4F54; word-wrap: break-word;">Failed</span>
+                            <p id="FailCountData" style="color:#D82D24; font-size:20px; display:inline; top:13px; position:relative;">0</p>
+                            <span style="display:block; color: #4C4F54; word-wrap: break-word;">失败</span>
                         </div>
-                        <div style="margin: 0 8% 0 0%; width:25%;">
+                        <div style="margin: 0 8% 0 0%; width:35%;">
                             <img src="../static/images/pass.png" style="height:16px; width:16px; margin: 26px 6px 8px 0px;">
-                            <p id="PassCountData" style="color:#399C1D; font-size:20px; display:inline; top:13px; position:relative;">0</p>
-                            <span style="display:block; color: #4C4F54;">Passed</span>
+                            <p id="PassCountData" style="color:#399C1D; font-size:20px; display:inline; top:13px; position:relative;">14</p>
+                            <span style="display:block; color: #4C4F54;">成功</span>
+                        </div>
+                        <div style="margin: 0 8% 0 0%; width:35%;">
+                            <p id="PassCountData" style="color:#399C1D; height:16px; width:16px; margin: 26px 6px 8px 0px; font-size:20px;text-align:left;"><span class="text-success" style="display:block;font-size:20px">100%</span></p>
+                            <span style="display:block; color: #4C4F54;">成功率</span>
                         </div>
                     </div>
                 </div>
-                <span style="display:None;">
-                    <p style="font-size: 11px; color:#77797C;" class="text-center">Apply to Data Protection test</p>
-                </span>
             </div>
         </div>
         </div>
@@ -113,22 +119,23 @@
                 </span>
                 <div class="horizontal-align" style="margin: 10px 12px;">
                     <div style="display:flex;">
-                        <span class="text-danger" style="display:block;font-size:20px">0.0%</span>
+                        
                         <div style="margin: 0 0 0 8%; width: 35%;">
                             <img src="../static/images/fail.png" style="height:16px; width:16px; margin: 26px 6px 8px 0px;">
-                            <p id="FailCountData" style="color:#D82D24; font-size:20px; display:inline; top:13px; position:relative;">21</p>
-                            <span style="display:block; color: #4C4F54; word-wrap: break-word;">Failed</span>
+                            <p id="FailCountData" style="color:#D82D24; font-size:20px; display:inline; top:13px; position:relative;">2</p>
+                            <span style="display:block; color: #4C4F54; word-wrap: break-word;">失败</span>
                         </div>
-                        <div style="margin: 0 8% 0 0%; width:25%;">
+                        <div style="margin: 0 8% 0 0%; width:35%;">
                             <img src="../static/images/pass.png" style="height:16px; width:16px; margin: 26px 6px 8px 0px;">
-                            <p id="PassCountData" style="color:#399C1D; font-size:20px; display:inline; top:13px; position:relative;">0</p>
-                            <span style="display:block; color: #4C4F54;">Passed</span>
+                            <p id="PassCountData" style="color:#399C1D; font-size:20px; display:inline; top:13px; position:relative;">19</p>
+                            <span style="display:block; color: #4C4F54;">成功</span>
+                        </div>
+                        <div style="margin: 0 8% 0 0%; width:35%;">
+                            <p id="PassCountData" style="color:#399C1D; height:16px; width:16px; margin: 26px 6px 8px 0px; font-size:20px;text-align:left;"><span class="text-success" style="display:block;font-size:20px">90%</span></p>
+                            <span style="display:block; color: #4C4F54;">成功率</span>
                         </div>
                     </div>
                 </div>
-                <span style="display:None;">
-                    <p style="font-size: 11px; color:#77797C;" class="text-center">Apply to Data Protection test</p>
-                </span>
             </div>
         </div>
         </div>
@@ -140,7 +147,7 @@
 </div>
 
 <div id="loadResultDiv" class="container" style="padding:0;">
- <div id="threatPrevention" class="container" style="display:block;padding:0;">         <div style="font-size: 21px; font-weight:500; margin-bottom:10px;"> <h3>安全防护</h3> </div> <div style="display:flex;">         <div id="threatPreventionClick" style="display:flex; cursor:pointer; width:32%; color:#009CDA;">         <div id="threatPreventionGlyphicon" class="fa fa-chevron-down" style="padding:4px; padding-right: 8px;"></div>         <div style="font-size: 17px; font-weight:500;"> <h4>威胁防护</h4></div></div>         <div id="threatPreventionResult" style="display:none; width:48%;">         <div style="display:flex;">    <img src="../static/images/fail.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">       <span id="threatPreventionFailCount">5</span> Failed Tests    </p>         </div>         <div style="display:flex; margin-left:3%;">    <img src="../static/images/pass.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">      <span id="threatPreventionPassCount">0</span> Passed Tests    </p>         </div>         </div>         </div>         </div>
+ <div id="threatPrevention" class="container" style="display:block;padding:0;">         <div style="font-size: 21px; font-weight:500; margin-bottom:10px;"> <h3>安全防护</h3> </div> <div style="display:flex;">         <div id="threatPreventionClick" style="display:flex; cursor:pointer; width:32%; color:#009CDA;">         <div id="threatPreventionGlyphicon" class="fa fa-chevron-down" style="padding:4px; padding-right: 8px;"></div>         <div style="font-size: 17px; font-weight:500;"> <h4>威胁防护</h4></div></div>         <div id="threatPreventionResult" style="display:none; width:48%;">         <div style="display:flex;">    <img src="../static/images/fail.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">       <span id="threatPreventionFailCount">2</span> Failed Tests    </p>         </div>         <div style="display:flex; margin-left:3%;">    <img src="../static/images/pass.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">      <span id="threatPreventionPassCount">3</span> Passed Tests    </p>         </div>         </div>         </div>         </div>
   <div id="threatPreventionDivider" class="container" style="border-bottom: 1px solid #ccc; margin:15px auto; display:none;">
   </div>
 
@@ -148,46 +155,46 @@
     <div id="threatPreventionLabels" style="display:none; padding: 16px 12px 8px 12px; color: #939393">
     </div>
     <div id="threatAll" class="container">
-    <div class="row">         <div class="col-sm-1"> <p> 结果 </p></div>          <div class="col-sm-3"> <p> 测试分类 </p></div>         <div class="col-sm-1"> <p> 阻断 </p></div>         <div class="col-sm-6"> <p> 测试描述 </p></div>         <div class="col-sm-1"> <p> </p></div>         </div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+    <div class="row" style="width:100%;">         <div class="col-sm-1"> <p> 结果 </p></div>          <div class="col-sm-3"> <p> 测试分类 </p></div>         <div class="col-sm-1"> <p> 阻断 </p></div>         <div class="col-sm-6" style="text-align:center;"> <p> 测试描述 </p></div>         <div class="col-sm-1"> <p> </p></div>         </div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 可执行文件下载</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> URL_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试是否可以直接下载可执行文件，exe文件是病毒最常见载体之一</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 恶意木马网站访问</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> URL_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试是否阻止访问恶意木马网站，测试不会直接下载木马软件</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 钓鱼网站访问</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> URL_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试是否识别并阻止访问钓鱼网站，来源于 Phishtank.com权威识别的最新钓鱼站点 </p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-danger" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
         <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
@@ -200,7 +207,7 @@
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-danger" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
         <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
@@ -221,7 +228,7 @@
   </div>
   <div id="threatPreventionClearfloat" style="min-height:18px"></div>
 
- <div id="accessControl" class="container" style="display:block;padding:0;">         <div style="font-size: 21px; font-weight:500; margin-bottom:10px;"> <h3></h3> </div> <div style="display:flex;">         <div id="accessControlClick" style="display:flex; cursor:pointer; width:32%; color:#009CDA;">         <div id="accessControlGlyphicon" class="fa fa-chevron-down" style="padding:4px; padding-right: 8px;"></div>         <div style="font-size: 17px; font-weight:500;"> <h4>访问控制</h4></div></div>         <div id="accessControlResult" style="display:none; width:48%;">         <div style="display:flex;">    <img src="../static/images/fail.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">       <span id="accessControlFailCount">2</span> Failed Tests    </p>         </div>         <div style="display:flex; margin-left:3%;">    <img src="../static/images/pass.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">      <span id="accessControlPassCount">0</span> Passed Tests    </p>         </div>         </div>         </div>         </div>
+ <div id="accessControl" class="container" style="display:block;padding:0;">         <div style="font-size: 21px; font-weight:500; margin-bottom:10px;"> <h3></h3> </div> <div style="display:flex;">         <div id="accessControlClick" style="display:flex; cursor:pointer; width:32%; color:#009CDA;">         <div id="accessControlGlyphicon" class="fa fa-chevron-down" style="padding:4px; padding-right: 8px;"></div>         <div style="font-size: 17px; font-weight:500;"> <h4>访问控制</h4></div></div>         <div id="accessControlResult" style="display:none; width:48%;">         <div style="display:flex;">    <img src="../static/images/fail.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">       <span id="accessControlFailCount">0</span> Failed Tests    </p>         </div>         <div style="display:flex; margin-left:3%;">    <img src="../static/images/pass.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">      <span id="accessControlPassCount">2</span> Passed Tests    </p>         </div>         </div>         </div>         </div>
 
   <div id="accessControlDivider" class="container" style="border-bottom: 1px solid #ccc; margin:15px auto; display:none;">
   <!-- add access control divider here -->
@@ -232,26 +239,26 @@
    </div>
  
   <div id="accessAll" class="container">
-   <div class="row">         <div class="col-sm-1"> <p> 结果 </p></div>          <div class="col-sm-3"> <p> 测试分类 </p></div>         <div class="col-sm-1"> <p> 阻断 </p></div>         <div class="col-sm-6"> <p> 测试描述 </p></div>         <div class="col-sm-1"> <p> </p></div>         </div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+   <div class="row" style="width:100%;">         <div class="col-sm-1"> <p> 结果 </p></div>          <div class="col-sm-3"> <p> 测试分类 </p></div>         <div class="col-sm-1"> <p> 阻断 </p></div>         <div class="col-sm-6" style="text-align:center;"> <p> 测试描述 </p></div>         <div class="col-sm-1"> <p> </p></div>         </div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 暴力武器网站访问</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> URL_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试是否可以识别并阻止访问宣扬暴力的网站</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 成人网站访问</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> URL_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试是否识别并阻止访问涉黄成人网站</p>
@@ -269,189 +276,189 @@
   <div id="accessControlClearfloat" style="min-height:18px"></div>
 
 
- <div id="dataProtection" class="container" style="display:block;padding:0;">         <div style="font-size: 21px; font-weight:500; margin-bottom:10px;"> <h3>数据防泄漏</h3> </div> <div style="display:flex;">         <div id="dataProtectionClick" style="display:flex; cursor:pointer; width:32%; color:#009CDA;">         <div id="dataProtectionGlyphicon" class="fa fa-chevron-down" style="padding:4px; padding-right: 8px;"></div>         <div style="font-size: 17px; font-weight:500;"> <h4>数据保护</h4></div></div>         <div id="dataProtectionResult" style="display:none; width:48%;">         <div style="display:flex;">    <img src="../static/images/fail.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">       <span id="dataProtectionFailCount">14</span> Failed Tests    </p>         </div>         <div style="display:flex; margin-left:3%;">    <img src="../static/images/pass.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">      <span id="dataProtectionPassCount">0</span> Passed Tests    </p>         </div>         </div>         </div>         </div>
+ <div id="dataProtection" class="container" style="display:block;padding:0;">         <div style="font-size: 21px; font-weight:500; margin-bottom:10px;"> <h3>数据防泄漏</h3> </div> <div style="display:flex;">         <div id="dataProtectionClick" style="display:flex; cursor:pointer; width:32%; color:#009CDA;">         <div id="dataProtectionGlyphicon" class="fa fa-chevron-down" style="padding:4px; padding-right: 8px;"></div>         <div style="font-size: 17px; font-weight:500;"> <h4>数据保护</h4></div></div>         <div id="dataProtectionResult" style="display:none; width:48%;">         <div style="display:flex;">    <img src="../static/images/fail.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">       <span id="dataProtectionFailCount">0</span> Failed Tests    </p>         </div>         <div style="display:flex; margin-left:3%;">    <img src="../static/images/pass.png" style="width:15px; height:15px; margin:5px;">    <p style="color:#2A2C30;">      <span id="dataProtectionPassCount">14</span> Passed Tests    </p>         </div>         </div>         </div>         </div>
 
   <div id="dataprotectionBlock">
  <div id="dataprotectionLabels"  style="display:none; padding: 16px 12px 8px 12px; color: #939393;" >
  
  </div>
     <div id="dataAll" class="container">
-    <div class="row">         <div class="col-sm-1"> <p> 结果 </p></div>          <div class="col-sm-3"> <p> 测试分类 </p></div>         <div class="col-sm-1"> <p> 阻断 </p></div>         <div class="col-sm-6"> <p> 测试描述 </p></div>         <div class="col-sm-1"> <p> </p></div>         </div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+    <div class="row" style="width:100%;">         <div class="col-sm-1"> <p> 结果 </p></div>          <div class="col-sm-3"> <p> 测试分类 </p></div>         <div class="col-sm-1"> <p> 阻断 </p></div>         <div class="col-sm-6" style="text-align:center;"> <p> 测试描述 </p></div>         <div class="col-sm-1"> <p> </p></div>         </div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 个人隐私信息保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>验证是否可以识别并保护个人隐私信息外泄</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 个人隐私信息保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试识别并防止包含隐私信息的图片外发</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 个人隐私信息保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试包含隐私信息Word,Excel等文档外发</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 企业机密保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试是否识别并阻止包含企业标准合同，财务报表等敏感信息外泄</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 企业机密保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试识别并保护源代码外泄</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 企业机密保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试识别并保护企业薪酬福利信息外泄</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 企业机密保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> OTHER </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>网络拓扑图，Password/Shadow文件上传</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 不正当言论</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试言论是否包含淫秽文字</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 不正当言论</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> OTHER </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>暴力武器 </p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 不正当言论</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> OTHER </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试识别并阻止反党反政府等言论传播 </p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 行业特点信息保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>测试识别病人住院信息、病患病症等外泄</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 行业特点信息保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>健康病症，体检报告 </p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 行业特点信息保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>保险理赔</p>
         </div> 
         <div class="col-sm-1">
         <p> </p> 
-        </div></div><div class="row text-danger" style="display:flex; background-color:#ffffff;"> 
+        </div></div><div class="row text-primary" style="display:flex;width:100%;background-color:#ffffff;"> 
         <div class="col-sm-1"> 
-        <div> <img src="../static/images/fail.png "style="width:15px; height:15px; margin:5px;"> </div>
+        <div> <img src="../static/images/pass.png "style="width:15px; height:15px; margin:5px;"> </div>
         </div> 
         <div class="col-sm-3"> <p> 行业特点信息保护</p></div> 
         <div class="col-sm-2"> 
-        <div> <p> FAIL_BLK </p></div>
+        <div> <p> DLP_BLK </p></div>
         </div> 
         <div class="col-sm-5"> 
         <p>AutoCAD图纸 </p>
