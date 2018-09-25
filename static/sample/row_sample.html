@@ -1,0 +1,111 @@
+def get_classes(request):
+    portlists=models.chkportinfo.objects.all()
+    return render(request,'get_classes.html',{'portlists':portlists})
+ 
+def add_classes(request):
+    if request.method == "GET":
+        return render(request, 'add_classes.html')
+    elif request.method == 'POST':
+        ips = request.POST.get('ips')
+        ports=request.POST.get('ports')
+        contacts=request.POST.get('contacts')
+        models.chkportinfo.objects.create(IPs=ips,ports=ports,contact=contacts)
+        return redirect('/get_classes.html')
+ 
+ 
+def del_classes(request):
+    id = request.GET.get('id')
+    models.chkportinfo.objects.filter(id=id).delete()
+    return redirect('/get_classes.html')
+ 
+def edit_classes(request):
+    if request.method == 'GET':
+        id = request.GET.get('id')
+        obj = models.chkportinfo.objects.filter(id=id).first()
+        return render(request, 'edit_classes.html', {'obj': obj})
+    elif request.method == 'POST':
+        id = request.GET.get('id')
+        ips = request.POST.get('ips')
+        ports = request.POST.get('ports')
+        contacts=request.POST.get('contacts')
+        models.chkportinfo.objects.filter(id=id).update(IPs=ips,ports=ports,contact=contacts)
+        return redirect('/get_classes.html')
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="add_classes.html" method="POST">
+    {% csrf_token %}
+    IP<input type="text" class="form-control" name="ips" placeholder="IP"></br>
+端口<input type="text" class="form-control" name="ports" placeholder="端口"></br>
+    联系人<input type="text" class="form-control" name="contacts" placeholder="联系人邮件"></br>
+ 
+    <input type="submit" value="提交" />
+</form>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for row in portlists %}
+            <tr>
+                <td>{{ row.IPs }}</td>
+                <td>{{ row.ports }}</td>
+                <td>
+                    <a href="/edit_classes.html?id={{ row.id }}">编辑</a>|
+                    <a href="/del_classes.html?id={{ row.id }}">删除</a>
+ 
+</br>
+                </td>
+            </tr>
+        {% endfor %}
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/edit_classes.html?id={{ obj.id }}" method="POST">
+        {% csrf_token %}
+    <input type="text" name="ips" value="{{ obj.IPs }}" />
+    <input type="text" name="ports" value="{{ obj.ports }}" />
+    <input type="text" name="contacts" value="{{ obj.contact }}" />
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>
+
+
