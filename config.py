@@ -9,6 +9,7 @@ from source_urls import EXE_URLS, MALICIOUS_WEBSITES, PHISHING_ATTACK,\
 
 VIRUS_BLOCK_INFO = "访问的URL中含有安全风险"
 URL_BLOCK_INFO = '本次访问违反了公司的网络安全策略'
+URL_BLOCK_INFO23 = '本次访问存在安全风险'
 DLP_BLOCK_INFO = '本次访问违反了公司的数据防泄漏策略'
 #PROXIES = {'http': 'http://172.18.200.240:8080'}
 PROXIES = {'http': 'http://49.4.84.41:8066'}
