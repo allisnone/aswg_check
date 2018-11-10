@@ -6,7 +6,7 @@ import json
 import string
 import requests
 from urllib.parse import quote
-from config import VIRUS_BLOCK_INFO,URL_BLOCK_INFO,URL_BLOCK_INFO23,DLP_BLOCK_INFO,PROXIES,SECURITY_CONFIG,REPLACE_KEYS,reverse_str
+from config import VIRUS_BLOCK_INFO,URL_BLOCK_INFO,URL_BLOCK_INFO23,DLP_BLOCK_INFO,EP_BLOCK_INFO,PROXIES,SECURITY_CONFIG,REPLACE_KEYS,reverse_str
 import random,sys
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 import html_create as html
@@ -32,6 +32,8 @@ def get_block_info(response_text):
         return 'URL_BLK'
     elif DLP_BLOCK_INFO in response_text:
         return 'DLP_BLK'
+    elif EP_BLOCK_INFO in response_text:
+        return 'EP_BLK'
     else:
         return 'OTHER_BLK'
 
