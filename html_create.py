@@ -69,7 +69,7 @@ def get_sub_summary_html(h3_content='数据防泄漏',h4_content='数据保护',
     h4_html = '<h4>%s</h4></div>' % h4_content
     fail_img_html = '    <img src="%s" style="width:15px; height:15px; margin:1px;">' % fail_img
     fail_count_html = '      <span id="dataProtectionFailCount" style="color:#D82D24;margin:5px;">%s</span> 失败' % fail_count
-    pass_img_html = '    <img src="%s" style="width:15px; height:15px; margin:5px;">' % pass_img
+    pass_img_html = '    <img src="%s" style="display:inline;width:15px; height:15px; margin:1px;">' % pass_img
     pass_count_html = '      <span id="dataProtectionPassCount" style="color:#399C1D;margin:5px;">%s</span> 成功' % pass_count
     sub_summary_html = ' <div id="dataProtection" class="container" style="display:block;padding:0;"> \
         <div style="font-size: 21px; font-weight:500; margin-bottom:10px;width:100%;"> ' + h3_html + '</div> <div style="display:inline;width:100%"> \
@@ -77,9 +77,9 @@ def get_sub_summary_html(h3_content='数据防泄漏',h4_content='数据保护',
         <div id="dataProtectionGlyphicon" class="fa fa-chevron-down" style="padding:4px; padding-right: 8px;"></div> \
         <div style="font-size: 17px; font-weight:500;"> ' + h4_html + '</div> \
         <div id="dataProtectionResult" class="col-xs-8 col-sm-8" style="display:inline;"> \
-        <div style="display:inline;margin-left:5%;">' + fail_img_html + '    <p style="color:#2A2C30;display:inline;"> ' + fail_count_html + '    </p> \
+        <div style="display:inline;">' + fail_img_html + '    <p style="color:#2A2C30;display:inline;"> ' + fail_count_html + '    </p> \
         </div> \
-        <div style="display:flex; margin-left:3%;">' + pass_img_html + '    <p style="color:#2A2C30;display:inline;">' + pass_count_html + '    </p> \
+        <div style="display:flex; margin-left:5%;">' + pass_img_html + '    <p style="color:#2A2C30;display:inline;">' + pass_count_html + '    </p> \
         </div> \
         </div> \
         </div> \
