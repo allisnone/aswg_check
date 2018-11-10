@@ -19,7 +19,8 @@ setup(
     name = "aswgCheck", 
     options = options, 
     zipfile=None, 
-    windows=[{"script": "aswg.py", "icon_resources": [(1, "./static/images/aswg.ico")] }],   
+    #windows=[{"script": "aswg.py", "icon_resources": [(1, "./static/images/aswg.ico")] }],
+    console=['aswg.py'],
      
     ) 
 
