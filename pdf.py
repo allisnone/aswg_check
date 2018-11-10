@@ -42,5 +42,5 @@ def html2pdf(dest_url='',result_dir='./result/',wkhtmltopdf_dir='',now_time_str=
     #css = ['./static/css/bootstrap.min.css', './static/css/bootstrap-theme.min.css']
     #pdfkit.from_file('./result/result.html',result_pdf_name,options=options,css=css,configuration=config)
     #你可以尝试在windows直接用wkhtmltopdf 生成PDF文件
-    #wkhtmltopdf -a A4 file:///C:/Users/admin/aswg_check-master/result/result2.html result41.pdf
+    #wkhtmltopdf -s A4 file:///C:/Users/admin/aswg_check-master/result/result2.html result41.pdf
     return

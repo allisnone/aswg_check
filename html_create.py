@@ -79,7 +79,7 @@ def get_sub_summary_html(h3_content='数据防泄漏',h4_content='数据保护',
         <div id="dataProtectionResult" class="col-xs-8 col-sm-8" style="display:inline;"> \
         <div style="display:inline;">' + fail_img_html + '    <p style="color:#2A2C30;display:inline;"> ' + fail_count_html + '    </p> \
         </div> \
-        <div style="display:flex; margin-left:5%;">' + pass_img_html + '    <p style="color:#2A2C30;display:inline;">' + pass_count_html + '    </p> \
+        <div style="display:inline; margin-left:5%;">' + pass_img_html + '    <p style="color:#2A2C30;display:inline;">' + pass_count_html + '    </p> \
         </div> \
         </div> \
         </div> \
