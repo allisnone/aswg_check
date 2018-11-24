@@ -9,9 +9,7 @@ from source_urls import EXE_URLS, MALICIOUS_WEBSITES, PHISHING_ATTACK,\
 
 VIRUS_BLOCK_INFO = "访问的URL中含有安全风险"
 URL_BLOCK_INFO = '本次访问违反了公司的网络安全策略'
-URL_BLOCK_INFO23 = '本次访问存在安全风险'
 DLP_BLOCK_INFO = '本次访问违反了公司的数据防泄漏策略'
-EP_BLOCK_INFO = '访问被拒绝'
 #PROXIES = {'http': 'http://172.18.200.240:8080'}
 PROXIES = {'http': 'http://49.4.84.41:8066'}
 IMAGE_STATUS = {'pass':'../static/images/pass.png','fail':'../static/images/fail.png'}
@@ -46,7 +44,7 @@ SECURITY_CONFIG = {
                 'cross': '2',
                 'type': 'html',
                 'para': {},
-                'id':'2',
+                'id':'2'
                 },
                               
             #'Detect a phishing attack': 
@@ -61,7 +59,7 @@ SECURITY_CONFIG = {
                 'type': 'html',
                 'para': {},
                 'id':'3',
-                },
+               },
             #'Block a virus hidden in a zip file': 
                 {
                 'name':'压缩文件病毒',
@@ -75,7 +73,7 @@ SECURITY_CONFIG = {
                 'para': {},
                 'id':'4',
                 },
-                              
+                          
             #'Prevent a common virus from a known malicious site': 
                 {
                 'name':'普通病毒',
@@ -136,7 +134,7 @@ SECURITY_CONFIG = {
                 'para': {'content':'','file':'static/sample/cn_id_info.doc'},
                 'id':'31',
                 },
-            #'Block credit card exfiltration': 
+            #'Block credimyhtmlrd exfiltration': 
                 {
                 'name':'个人隐私信息保护',
                 'urls': CROSS_POST_URL,#CREDIT_CARD,
@@ -149,7 +147,7 @@ SECURITY_CONFIG = {
                 'para': {'content':'','file':'static/sample/business_card.jpg'},
                 'id':'32',
                 },
-            #'Block credit card exfiltration': 
+            #'Block credit card exfiltrmyhtmln': 
                 {
                 'name':'个人隐私信息保护',
                 'urls': CROSS_POST_URL,#CREDIT_CARD,
@@ -162,7 +160,6 @@ SECURITY_CONFIG = {
                 'para': {'content':'','file':'static/sample/employee.xls'},
                 'id':'33',
                 },
-                            
                             
             #'Block Social Security number exfiltration': 
                 {
@@ -348,7 +345,7 @@ URL_MAPPING,REPLACE_KEYS = get_url_mapping()
 REPLACE_KEYS['Summary Title'] = 'ALL_SUMMARY_TITLE999'
 REPLACE_KEYS['All Summary Result'] = 'SUMMARY_ALL_RESULT999'
 #print(SECURITY_CONFIG)
-#print('REPLACE_KEYS=',REPLACE_KEYS)
+print('REPLACE_KEYS=',REPLACE_KEYS)
 """
 REPLACE_KEYS= {
     'Summary Title': 'ALL_SUMMARY_TITLE999',
