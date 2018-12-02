@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # aswg_check
 
 一、Pure Python 环境准备和使用步骤：
