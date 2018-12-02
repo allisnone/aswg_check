@@ -42,6 +42,7 @@ pyinstaller -F -i ./static/images/aswg.ico html2pdf.py
 三、EXE 文件使用步骤 
 程序运行的是有前提的，当前客户端已配置好，只需两个条件：
 aswg 策略，安装wkhtmltopdf.exe（用于将HTML结果转换为PDF文件）应用程序并配置好环境变量。
+更详细的说明请阅读： aswg/doc/ASWG安全预检查指导说明.docx
 1、验证aswg IP是否可达： ping 172.18.230.23  或者 telnet 172.18.230.23 8080
 2、验证已配置好wkhtmltopdf.exe的环境变量： wkhtmltopdf.exe -V
 3、发布的aswg目录至windows c盘某个目录即可
