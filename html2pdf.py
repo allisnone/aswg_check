@@ -134,7 +134,7 @@ if __name__=='__main__':
     print("----------------------使用说明--------------")
     print("该程序htmToPdf.exe用于把html文件转换为PDF文件！如需转换在线的html文件，请自行研究：wkhtmltopdf.exe")
     print("1. 请确认已经建立result目录和static目录")
-    print('2. 默认先运行aswg.exe程序生成html文件，后运行htmlToPDF.exe程序')
+    print('2. 默认先运行aswg.exe程序生成html文件，后运行html2pdf.exe程序')
     print("3. 默认不加任何参数将把./result/目录下尚未转换为PDF文件的html文件：转换为PDF文件。")
     print("4. 你也可指定目录-必须是绝对路径")
     print("----------------------End 使用说明--------------")
