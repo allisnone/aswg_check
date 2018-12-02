@@ -155,6 +155,7 @@ if __name__=='__main__':
     print('----------------------生成PDF测试报告--------------')
     aswg_or_not = 'None'
     html_need_to_transfer = get_untransfer_html(given_dir='./result/',key_word='result')
+    print('共有%s份HTML文件需要转换为PDF文件'%len(html_need_to_transfer))
     pdf_nums = 0
     if  html_need_to_transfer:
         pdf_nums = html2pdfs(html_need_to_transfer)
