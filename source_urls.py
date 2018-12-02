@@ -16,12 +16,11 @@ COMMON_VIRUS_FROM_KNOWN_MALICIOUS_SITE = ''
 
 #Access Control
 
-#VOILENCE_WEAPON = 'http://www.tiexue.net/pictopic-358-1.myhtml'
+#VOILENCE_WEAPON = 'http://www.tiexue.net/pictopic-358-1.html'
 VOILENCE_WEAPON = 'http://www.reviewgun.com'
 ANONYMIZING_WEBSITES = 'http://the-nightmare.com/work/m.rar'
-ADULT_WEBSITES = 'www.t66y.com'
 #ADULT_WEBSITES ='https://www.xmeise.com/brands'
-#ADULT_WEBSITES = VOILENCE_WEAPON
+ADULT_WEBSITES = VOILENCE_WEAPON
 #ADULT_WEBSITES = 'https://www.barracuda.com/'
 
 #Data Protection Assessment
@@ -31,7 +30,7 @@ SOCIAL_SECURITY_NUMBER = 'http://www.sogaoqing.com/upload/securypreview_credit_c
 SOURCE_CODE = 'https://github.com/allisnone/rename/blob/master/batch_rename.py'
 
 
-INTERAL_URL = 'add_classes.myhtml'
+INTERAL_URL = 'add_classes.html'
 #CROSS_POST_URL = 'http://172.22.80.205/post.php'
 CROSS_POST_URL = 'http://www.sogaoqing.com/post.php'
 INTERAL_POST_URL = 'http://114.116.87.228:8001/post'

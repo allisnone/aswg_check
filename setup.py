@@ -4,7 +4,7 @@ import py2exe
 import sys
 
 sys.setrecursionlimit(10000000)
-"""
+
 includes = ["requests","requests_toolbelt","pdfkit"] #"encodings", "encodings.*",
 options = {"py2exe": 
             {   "compressed": 1, 
@@ -16,14 +16,13 @@ options = {"py2exe":
 setup(    
     version = "0.1.0", 
     description = "ASWG Check You Internet ENV", 
-    name = "aswg", 
-    #options = options, 
+    name = "aswgCheck", 
+    options = options, 
     zipfile=None, 
     #windows=[{"script": "aswg.py", "icon_resources": [(1, "./static/images/aswg.ico")] }],
     console=['aswg.py'],
      
     ) 
-"""
-setup(console=['aswg.py'])
+
 #pyinstaller -F -w static/images/aswg.ico aswg.py
 #https://blog.csdn.net/u014563989/article/details/80940321

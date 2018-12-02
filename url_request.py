@@ -5,16 +5,17 @@ import csv
 import json
 import string
 import requests
-import codecs
 from urllib.parse import quote
 from config import VIRUS_BLOCK_INFO,URL_BLOCK_INFO,DLP_BLOCK_INFO,PROXIES,SECURITY_CONFIG,REPLACE_KEYS,reverse_str
 import random,sys
 from requests_toolbelt.multipart.encoder import MultipartEncoder
-import myhtml
+import html_create as html
 #pip install requests_toolbelt
 #from aswg.config import SECURITY_CONFIG
 import datetime
-import pdf
+#import pdf
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def encodeURL(url):
     """
@@ -72,6 +73,16 @@ def get_request(url,params={},proxy=PROXIES):
 
 def post_request(url,uri='',params={},headers={},proxy=PROXIES):
     return http_request(url,uri=uri,params=params,type='post',headers=headers,proxy=PROXIES)
+
+def is_proxy_workable(proxy=PROXIES):
+    url='http://www.sogaoqing.com'
+    try:
+        r = requests.get(encodeURL(url), proxies=proxy, verify=False)
+        return True
+    except Exception as e:
+        print('ERROR=',e)
+        return False
+    
 
 def write2csv(data):
     try:
@@ -231,9 +242,9 @@ def get_aswg_category_result(datas,proxy=PROXIES):
     all_results = []
     total_num =len(datas)
     sumary = initial_summary(total_num, ASWG_BLOCK_STATUS)
-    sub_section_html = myhtml.form_head_element()
+    sub_section_html = html.form_head_element()
     for item in datas:
-        url = item['urls']       
+        url = item['urls']
         if not url:
             continue
         para_data = item['para']
@@ -258,7 +269,7 @@ def get_aswg_category_result(datas,proxy=PROXIES):
             """
             form html here
             """
-            row_html = myhtml.get_item_html(sub_result,proxies=proxy)
+            row_html = html.get_item_html(sub_result,proxies=proxy)
             sub_section_html = sub_section_html + row_html
             
             all_results.append(sub_result)
@@ -308,7 +319,12 @@ def get_aswg_result(conf=SECURITY_CONFIG,proxy=PROXIES):
     now_time_str = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
     now_time = datetime.datetime.now().strftime('%A %Y-%m-%d %H:%M:%S %p')
     base_html = read_base_html()
-    summary_html = myhtml.get_summary_title_html(h3_content='综合评估',now_time=now_time)
+    proxy_str = 'None'
+    if proxy:
+        proxy_str = proxy['http']
+    else:
+        pass
+    summary_html = html.get_summary_title_html(h3_content='综合评估',proxy=proxy_str,now_time=now_time)
     base_html = base_html.replace(REPLACE_KEYS['Summary Title'],summary_html)
     all_summary_list = []
     all_summary = {}
@@ -339,16 +355,15 @@ def get_aswg_result(conf=SECURITY_CONFIG,proxy=PROXIES):
                 pass
             sub_result,L2_sumary,sub_section_html = get_aswg_category_result(conf[L1][L2],proxy=proxy)
             l2_pass_count = L2_sumary['total'] - L2_sumary['200_ok']
-            sub_summary_html = myhtml.get_sub_summary_html(h3_content=l2_h3_content,h4_content=l2_h4_content,
-                    fail_count=L2_sumary['200_ok'],pass_count=l2_pass_count,section=l2_section)
-            print(sub_result)
+            sub_summary_html = html.get_sub_summary_html(h3_content=l2_h3_content,h4_content=l2_h4_content,
+                         fail_count=L2_sumary['200_ok'],pass_count=l2_pass_count,section=l2_section)
+            print(L2,' L2 detail: ',sub_result)
+            print(L2,' L2 summary: ',L2_sumary)
             l2_result_key = L2 + ' Result'
             #替换子项的总结
-            print('REPLACE_KEYS[L2]=',REPLACE_KEYS[L2])
             base_html = base_html.replace(REPLACE_KEYS[L2],sub_summary_html)
             #替换子项的具体行
             base_html = base_html.replace(REPLACE_KEYS[l2_result_key], sub_section_html)
-            print(L2,': ', L2_sumary)
             L1_summary_list.append(L2_sumary)
         #汇总L1的summary
         L1_summary = combile_L2_summary(L1_summary_list)
@@ -358,10 +373,9 @@ def get_aswg_result(conf=SECURITY_CONFIG,proxy=PROXIES):
         if L1== 'Data Protection Assessment':
             l1_h4_content = '数据评估'
         l1_fail_count = L1_summary['200_ok']
-        l1_pass_count = L1_summary['total'] - L2_sumary['200_ok']
-        L1_summary_html = myhtml.get_L1_summary_html(l1_h4_content,loader_img='../static/images/loader.png',
-                                               fail_count=l1_fail_count,pass_count=l1_pass_count)
-        print('REPLACE_KEYS[L1]=',REPLACE_KEYS[L1])
+        l1_pass_count = L1_summary['total'] - L1_summary['200_ok']
+        L1_summary_html = html.get_L1_summary_html(l1_h4_content,loader_img='../static/images/loader.png',
+                                                   fail_count=l1_fail_count,pass_count=l1_pass_count)
         base_html = base_html.replace(REPLACE_KEYS[L1],L1_summary_html)
         L1_summary_html = ''
         all_summary_list.append(L1_summary)
@@ -369,15 +383,16 @@ def get_aswg_result(conf=SECURITY_CONFIG,proxy=PROXIES):
     all_summary['all'] = combile_L2_summary(all_summary_list) 
     all_fail_count = all_summary['all']['200_ok']
     all_pass_count = all_summary['all']['total'] - all_summary['all']['200_ok']
-    all_summary_html = myhtml.get_L1_summary_html(h4_content='综合评估',loader_img='../static/images/loader.png',
-                                            fail_count=all_fail_count,pass_count=all_pass_count)
+    all_summary_html = html.get_L1_summary_html(h4_content='综合评估',loader_img='../static/images/loader.png',
+                                                fail_count=all_fail_count,pass_count=all_pass_count)
     base_html = base_html.replace(REPLACE_KEYS['All Summary Result'],all_summary_html)
     #替换生成最终综合结论的HTML
-    write_final_html(base_html,file_name='./result/result.html')
+    #write_final_html(base_html,file_name='./result/result_%s.html'%now_time_str)
+    #print('Write the result as HTML: %s'% file_name)
     return  all_summary,base_html,now_time_str
 """            
 if __name__ == '__main__':
-    #print("您的公myhtml址是： ",get_my_public_ip())
+    #print("您的公网IP地址是： ",get_my_public_ip())
     print('PROXIES=',PROXIES)
     #PROXIES={}
     all_summary = get_aswg_result(proxy=PROXIES)

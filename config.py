@@ -44,7 +44,7 @@ SECURITY_CONFIG = {
                 'cross': '2',
                 'type': 'html',
                 'para': {},
-                'id':'2'
+                'id':'2',
                 },
                               
             #'Detect a phishing attack': 
@@ -59,7 +59,7 @@ SECURITY_CONFIG = {
                 'type': 'html',
                 'para': {},
                 'id':'3',
-               },
+                },
             #'Block a virus hidden in a zip file': 
                 {
                 'name':'压缩文件病毒',
@@ -73,7 +73,7 @@ SECURITY_CONFIG = {
                 'para': {},
                 'id':'4',
                 },
-                          
+                              
             #'Prevent a common virus from a known malicious site': 
                 {
                 'name':'普通病毒',
@@ -134,7 +134,7 @@ SECURITY_CONFIG = {
                 'para': {'content':'','file':'static/sample/cn_id_info.doc'},
                 'id':'31',
                 },
-            #'Block credimyhtmlrd exfiltration': 
+            #'Block credit card exfiltration': 
                 {
                 'name':'个人隐私信息保护',
                 'urls': CROSS_POST_URL,#CREDIT_CARD,
@@ -147,7 +147,7 @@ SECURITY_CONFIG = {
                 'para': {'content':'','file':'static/sample/business_card.jpg'},
                 'id':'32',
                 },
-            #'Block credit card exfiltrmyhtmln': 
+            #'Block credit card exfiltration': 
                 {
                 'name':'个人隐私信息保护',
                 'urls': CROSS_POST_URL,#CREDIT_CARD,
@@ -160,6 +160,7 @@ SECURITY_CONFIG = {
                 'para': {'content':'','file':'static/sample/employee.xls'},
                 'id':'33',
                 },
+                            
                             
             #'Block Social Security number exfiltration': 
                 {
@@ -345,7 +346,7 @@ URL_MAPPING,REPLACE_KEYS = get_url_mapping()
 REPLACE_KEYS['Summary Title'] = 'ALL_SUMMARY_TITLE999'
 REPLACE_KEYS['All Summary Result'] = 'SUMMARY_ALL_RESULT999'
 #print(SECURITY_CONFIG)
-print('REPLACE_KEYS=',REPLACE_KEYS)
+#print('REPLACE_KEYS=',REPLACE_KEYS)
 """
 REPLACE_KEYS= {
     'Summary Title': 'ALL_SUMMARY_TITLE999',
